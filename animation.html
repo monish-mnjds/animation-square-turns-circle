@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation - Square turns Circle</title>
+    <style>
+        body
+        {
+            background: crimson;
+        }
+        div
+        {
+            display: inline-block;
+            padding: 50px;
+            background:whitesmoke;
+            position: relative;
+            top: 125px;
+            left: 750px;
+            animation: squareturnscircle 5s linear 0s infinite normal;
+        }
+        @keyframes squareturnscircle
+        {
+            0%
+            {
+                transform: translate(-300px,0px);
+            }
+            25%
+            {
+                transform: translate(0px,0px);
+                border-radius: 0px 50px 0px 0px;
+            }
+            50%
+            {
+                transform: translate(0px,300px);
+                border-radius: 0px 50px 50px 0px;
+            }
+            75%
+            {
+                transform: translate(-300px,300px);
+                border-radius: 0px 50px 50px 50px;
+            }
+            100%
+            {
+                transform: translate(-300px,0px);
+                border-radius: 50px 50px 50px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
